@@ -111,3 +111,4 @@ keys/
 *.token
 *.env.local
 .env
+*.exe
