@@ -82,10 +82,10 @@ fabric.properties
 terraform.rc
 
 # Kubernetes Secrets
-**/secret*.yml
-**/secret*.yaml
-*-secret.yml
-*-secret.yaml
+#**/secret*.yml
+#**/secret*.yaml
+#*-secret.yml
+#*-secret.yaml
 
 # Database credentials
 **/db-secret*.yml
