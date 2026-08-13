@@ -114,3 +114,6 @@ keys/
 *.exe
 
 .dermaday/
+
+# Local infrastructure working notes
+docs/

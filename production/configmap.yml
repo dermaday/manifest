@@ -1,9 +1,15 @@
 apiVersion: v1
 kind: ConfigMap
-
 metadata:
-  name: dermaday-config
+  name: backend-config
   namespace: production
 
 data:
   SPRING_PROFILES_ACTIVE: "production"
+
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://dermaday-db.cdc82maymta7.ap-northeast-2.rds.amazonaws.com:5432/dermaday_production"
+
+  FRONTEND_BASE_URL: "https://www.dermaday.me"
+  BACKEND_BASE_URL: "https://api.dermaday.me"
+
+  JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=65.0"
