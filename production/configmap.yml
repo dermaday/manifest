@@ -11,36 +11,13 @@ data:
   # Database
   SPRING_DATASOURCE_URL: "jdbc:postgresql://dermaday-db.cdc82maymta7.ap-northeast-2.rds.amazonaws.com:5432/dermaday_production"
 
-  # HikariCP
-  SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE: "5"
-  SPRING_DATASOURCE_HIKARI_MINIMUM_IDLE: "1"
-  SPRING_DATASOURCE_HIKARI_CONNECTION_TIMEOUT: "10000"
-
   # Application URLs
   FRONTEND_BASE_URL: "https://www.dermaday.me"
   BACKEND_BASE_URL: "https://api.dermaday.me"
+  CORS_ALLOWED_ORIGINS: "https://dermaday.me,https://www.dermaday.me"
 
-  # JPA
-  SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
-  SPRING_JPA_OPEN_IN_VIEW: "false"
-
-  # CORS
-  CORS_ALLOWED_ORIGINS: "https://www.dermaday.me"
-
-  # Reverse Proxy
-  SERVER_FORWARD_HEADERS_STRATEGY: "framework"
-
-  # Graceful Shutdown
-  SERVER_SHUTDOWN: "graceful"
-  SPRING_LIFECYCLE_TIMEOUT_PER_SHUTDOWN_PHASE: "20s"
-
-  # Actuator / Kubernetes Probe
-  MANAGEMENT_ENDPOINT_HEALTH_PROBES_ENABLED: "true"
-  MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: "health,info"
-  MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS: "never"
+  # JWT
+  JWT_ACCESS_TOKEN_TTL: "PT1D"
 
   # JVM
   JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=65.0"
-
-  # Logging
-  LOGGING_LEVEL_ROOT: "INFO"
