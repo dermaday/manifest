@@ -110,5 +110,7 @@ argocd/*secret*.yaml
 keys/
 *.token
 *.env.local
-.env
+*.env
 *.exe
+
+.dermaday/
