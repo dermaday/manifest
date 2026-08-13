@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: dermaday-config
+  namespace: production
+
+data:
+  SPRING_PROFILES_ACTIVE: "production"
