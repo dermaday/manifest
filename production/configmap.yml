@@ -9,7 +9,7 @@ data:
   SPRING_PROFILES_ACTIVE: "production"
 
   # Database
-  SPRING_DATASOURCE_URL: "jdbc:postgresql://dermaday-db.cdc82maymta7.ap-northeast-2.rds.amazonaws.com:5432/dermaday_production"
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://dermaday-db.cdc82maymta7.ap-northeast-2.rds.amazonaws.com:5432/dermaday_production?sslmode=require"
 
   # Application URLs
   FRONTEND_BASE_URL: "https://www.dermaday.me"
@@ -21,3 +21,6 @@ data:
 
   # JVM
   JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=65.0"
+
+  # Kubernetes probes
+  MANAGEMENT_ENDPOINT_HEALTH_PROBES_ENABLED: "true"
