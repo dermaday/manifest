@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: production
+  labels:
+    app.kubernetes.io/name: backend
+    app.kubernetes.io/part-of: dermaday
+    app.kubernetes.io/environment: production
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: backend
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
