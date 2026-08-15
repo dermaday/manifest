@@ -9,7 +9,7 @@ metadata:
     app.kubernetes.io/environment: dev
 spec:
   # The backend workflow changes this to 1 together with the first immutable image SHA.
-  replicas: 0
+  replicas: 1
   revisionHistoryLimit: 3
   strategy:
     type: RollingUpdate
@@ -30,7 +30,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: backend
-          image: docker.io/wien0128/dermaday-be:bootstrap
+          image: wien0128/dermaday-be:5d52829b0024af286acc7eb8c75e6d8dbd8c240b
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
