@@ -30,7 +30,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: backend
-          image: wien0128/dermaday-be:aa48ee4e7d05f8427d7b8352aac7426a6c491c66
+          image: wien0128/dermaday-be:5983fc2b914d15ad63faaad983f10160b74b5ca4
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
