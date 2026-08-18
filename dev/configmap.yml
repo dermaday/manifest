@@ -19,6 +19,11 @@ data:
   # JWT
   JWT_ACCESS_TOKEN_TTL: "PT24H"
 
+  # S3
+  AWS_REGION: "ap-northeast-2"
+  S3_BUCKET: "dermaday-bucket"
+  S3_PRESIGNED_URL_TTL: "PT30M"
+
   # JVM
   JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=65.0"
 
