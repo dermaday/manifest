@@ -114,7 +114,5 @@ keys/
 *.exe
 
 .dermaday/
-
-# Local infrastructure working notes
-docs/
-/.idea/*.xml
+docs/*
+.idea/
