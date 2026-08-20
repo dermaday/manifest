@@ -27,6 +27,7 @@ data:
   # Firebase Cloud Messaging
   FIREBASE_PROJECT_ID: "dermaday-71877"
   GOOGLE_APPLICATION_CREDENTIALS: "/var/run/secrets/firebase/service-account.json"
+  PUSH_ENABLED: "true"
 
   # JVM
   JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=65.0"
