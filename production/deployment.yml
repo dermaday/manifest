@@ -8,7 +8,6 @@ metadata:
     app.kubernetes.io/part-of: dermaday
     app.kubernetes.io/environment: production
 spec:
-  # The backend workflow changes this to 1 together with the first immutable image SHA.
   replicas: 1
   revisionHistoryLimit: 3
   strategy:
@@ -41,6 +40,10 @@ spec:
                 name: backend-config
             - secretRef:
                 name: backend-secret
+          volumeMounts:
+            - name: firebase-admin-credentials
+              mountPath: /var/run/secrets/firebase
+              readOnly: true
           startupProbe:
             httpGet:
               path: /actuator/health/liveness
@@ -68,3 +71,10 @@ spec:
               memory: 768Mi
             limits:
               memory: 2Gi
+      volumes:
+        - name: firebase-admin-credentials
+          secret:
+            secretName: firebase-admin-credentials
+            items:
+              - key: service-account.json
+                path: service-account.json

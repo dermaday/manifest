@@ -24,6 +24,10 @@ data:
   S3_BUCKET: "dermaday-bucket"
   S3_PRESIGNED_URL_TTL: "PT30M"
 
+  # Firebase Cloud Messaging
+  FIREBASE_PROJECT_ID: "dermaday-71877"
+  GOOGLE_APPLICATION_CREDENTIALS: "/var/run/secrets/firebase/service-account.json"
+
   # JVM
   JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=65.0"
 
